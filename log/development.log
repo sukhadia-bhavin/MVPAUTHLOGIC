@@ -1,0 +1,2536 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (257.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20160110084306)
+  [4;36;1mSQL (96.3ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (55.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20160110084306')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20160110084306)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:38:05) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+
+NameError (undefined local variable or method `my_value' for #<Class:0x00000003de3980>):
+  app/models/user.rb:3:in `block in <class:User>'
+  authlogic (2.1.11) lib/authlogic/acts_as_authentic/base.rb:33:in `acts_as_authentic'
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  rake (0.9.2) lib/rake/ext/module.rb:36:in `const_missing'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (10.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:38:15) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+
+NameError (undefined local variable or method `my_value' for #<Class:0x0000000397dc88>):
+  app/models/user.rb:3:in `block in <class:User>'
+  authlogic (2.1.11) lib/authlogic/acts_as_authentic/base.rb:33:in `acts_as_authentic'
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  rake (0.9.2) lib/rake/ext/module.rb:36:in `const_missing'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:39:11) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+
+NameError (undefined local variable or method `my_value' for #<Class:0x0000000374d030>):
+  app/models/user.rb:3:in `block in <class:User>'
+  authlogic (2.1.11) lib/authlogic/acts_as_authentic/base.rb:33:in `acts_as_authentic'
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  rake (0.9.2) lib/rake/ext/module.rb:36:in `const_missing'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:39:18) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+
+NameError (undefined local variable or method `my_value' for #<Class:0x000000034d7300>):
+  app/models/user.rb:3:in `block in <class:User>'
+  authlogic (2.1.11) lib/authlogic/acts_as_authentic/base.rb:33:in `acts_as_authentic'
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  rake (0.9.2) lib/rake/ext/module.rb:36:in `const_missing'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.11) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.11) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:42:43) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:43:06) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:43:24) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:44:01) [GET]
+
+ActionController::RoutingError (No route matches "/user/new" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-10 14:44:07) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED /home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:3: syntax error, unexpected ')'
+..., :url => account_path do |f| ).to_s); @output_buffer.concat...
+...                               ^
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+Function body: #coding:UTF-8
+          def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Register</h1>\n\n"
+
+; @output_buffer.concat(( form_for @user, :url => account_path do |f| ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( render :partial => "form", :object => f ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit "Register" ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:91:in `module_eval'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:91:in `compile!'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process_with_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:3: syntax error, unexpected ')'
+..., :url => account_path do |f| ).to_s); @output_buffer.concat...
+...                               ^
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:10: syntax error, unexpected keyword_end, expecting ')') on line #3 of app/views/users/new.html.erb:
+1: <h1>Register</h1>
+2: 
+3: <%= form_for @user, :url => account_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= render :partial => "form", :object => f %>
+6:   <%= f.submit "Register" %>
+
+    <internal:prelude>:10:in `synchronize'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-10 14:45:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering users/new
+Rendered users/_form (1.7ms)
+Completed in 51ms (View: 39, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:45:25) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4c04fffe3d8d17184b80b892fd01ea27da191347f92deac33a2f2e31dfd246184c4d458081382833aa343821c4a38d996bed8cb7627bdd7cdeca21d0155797f9') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY '5yoD7O5m60qHoXuThuZU') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (0.8ms)
+Completed in 18ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:46:14) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '8c12fc91bbb32e9a99af9504b9af606de0cc65848cafbd1d79e9ac2fca4410291bc0ec6e5de15432e7a526a353a336e3b951d00c0effaa30eb835821d1b4abc7') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY '2iuHPGEptHTm8zdVHCXK') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (0.7ms)
+Completed in 36ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:46:20) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:46:20) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 28ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:46:33) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:46:33) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-10 14:46:47) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering users/new
+Rendered users/_form (0.6ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:47:11) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '96c66103d2c8e5f2ca1a054a118421eddad7832d40b3b3594df53563f7ddacbf97f802afb62d2720f18b1837dfc8c3cee3be8f560e46870772dc72ab20a1f497') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'iRjNhXEcWffeUF7cH1zR') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (0.6ms)
+Completed in 17ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:48:12) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'a060aab3a987896bdfa34b6b19d0d2d36ece144feb6e754dfa3472f57458204dd15dcb70d794fbd972be5c98e6b053d055b04bfeb02f27c6ff7091c0c96736ec') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'n0zaxofnn3BuPXLdV9x') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (1.2ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:48:34) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5cda8929c86802df8a063e8388914294f48871070f2416172b127149519e6822c55820140dc1b5e07acb48e540f5181470266447299e355fe18560ace02773ba') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'yfrOvLKsBzGLiECcfT3') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (2.2ms)
+Completed in 42ms (View: 8, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-10 14:48:52) [POST]
+  Parameters: {"user"=>{"login"=>"sukhadia.bhavin", "email"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'sukhadia.bhavin') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'G6BL8huCGiZXpzrBwIDB') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`login`, `email`, `crypted_password`, `password_salt`, `persistence_token`, `single_access_token`, `perishable_token`, `login_count`, `failed_login_count`, `last_request_at`, `current_login_at`, `last_login_at`, `current_login_ip`, `last_login_ip`, `created_at`, `updated_at`) VALUES('sukhadia.bhavin', 'sukhadia.bhavin@gmail.com', 'dcb6c39219c140ddae182b26a8482ed21101b49e879832547181940f734a749643060191f514edff93081b211ed2386adb0e5f5f03db11e3c3e79d01628b2e59', 'J30ao5hYhMHtdniY5Mjh', 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b', 'G6BL8huCGiZXpzrBwIDB', 'EfmOr6DwEM5jCBihOnv', 1, 0, '2016-01-10 09:18:53', '2016-01-10 09:18:53', NULL, '127.0.0.1', NULL, '2016-01-10 09:18:53', '2016-01-10 09:18:53')[0m
+  [4;35;1mSQL (68.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 110ms (DB: 70) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:48:53) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:18:53', `perishable_token` = '7Pxs0OCUFDRjn0NiFO2p', `updated_at` = '2016-01-10 09:18:53' WHERE `id` = 1[0m
+  [4;35;1mSQL (73.9ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 121ms (View: 21, DB: 74) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-10 14:49:04) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:19:04', `perishable_token` = 'a4GkquwI12c5SDvxOZw2', `updated_at` = '2016-01-10 09:19:04' WHERE `id` = 1[0m
+  [4;35;1mSQL (68.7ms)[0m   [0mCOMMIT[0m
+Rendering users/edit
+Rendered users/_form (0.8ms)
+Completed in 88ms (View: 5, DB: 70) | 200 OK [http://localhost/account/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:49:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:19:08', `perishable_token` = 'hqjpGXATsd5DUfBSAuT', `updated_at` = '2016-01-10 09:19:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (86.6ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 101ms (View: 1, DB: 87) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:49:58) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:19:58', `perishable_token` = 'PhAXtRVXH41eFDlblLU', `updated_at` = '2016-01-10 09:19:58' WHERE `id` = 1[0m
+  [4;35;1mSQL (87.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 102ms (DB: 88) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:49:59) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:19:59', `perishable_token` = '0765CFlXHn7kz48lpl', `updated_at` = '2016-01-10 09:19:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (71.5ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 85ms (View: 1, DB: 72) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:50:08) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:20:08', `perishable_token` = '5wVZgsyy5JaLeliOAAL', `updated_at` = '2016-01-10 09:20:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (68.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 83ms (DB: 69) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:50:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:20:08', `perishable_token` = 'Y6NzJQjG9ByJAIBqfLG', `updated_at` = '2016-01-10 09:20:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (71.0ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 86ms (View: 1, DB: 71) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:50:29) [GET]
+
+ActionController::RoutingError (No route matches "/users_session/new" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:50:38) [GET]
+
+ActionController::RoutingError (No route matches "/users_sessions/new" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:50:49) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:20:49', `perishable_token` = 'xOhXA9Eyq2danjvwTGIo', `updated_at` = '2016-01-10 09:20:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (62.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 75ms (DB: 63) | 302 Found [http://localhost/user_sessions/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:50:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:20:49', `perishable_token` = 'uyf90debVK8KSyIp5szk', `updated_at` = '2016-01-10 09:20:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (63.9ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 80ms (View: 1, DB: 65) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:51:58) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:21:58', `perishable_token` = 'SqfScy8CFYRwJip2x', `updated_at` = '2016-01-10 09:21:58' WHERE `id` = 1[0m
+  [4;35;1mSQL (59.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 99ms (DB: 60) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:51:58) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:21:58', `perishable_token` = 'qhtIZEcuiOsi5quGPIWt', `updated_at` = '2016-01-10 09:21:58' WHERE `id` = 1[0m
+  [4;35;1mSQL (57.2ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 77ms (View: 4, DB: 58) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:52:12) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:22:12', `perishable_token` = '7Fn2dZuXOBkJZhbgAZVQ', `updated_at` = '2016-01-10 09:22:12' WHERE `id` = 1[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 116ms (DB: 100) | 302 Found [http://localhost/user_session/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:52:12) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'c8195f0f1cc57254729bb4255c65d888de351ef7612c3b05b3bd52272de428a11bee1fa811a65091ec90fb046e35578bb41e09c071637e2ca3a1fdd477360e3b') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:22:12', `perishable_token` = 'tFMypCHDAf3O3BRFAsBL', `updated_at` = '2016-01-10 09:22:12' WHERE `id` = 1[0m
+  [4;35;1mSQL (67.9ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 82ms (View: 1, DB: 68) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:53:27) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:53:50) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `login_count` = 2, `last_login_at` = '2016-01-10 09:18:53', `current_login_at` = '2016-01-10 09:23:50', `last_login_ip` = '127.0.0.1', `last_request_at` = '2016-01-10 09:23:50', `perishable_token` = 'ingZv82DmSQpclLNCvb1', `updated_at` = '2016-01-10 09:23:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (69.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 91ms (DB: 71) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 14:53:50) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:53:55) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:54:13) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `failed_login_count` = 1, `perishable_token` = 'iLlCic5XKbfvCgiRDsjl', `updated_at` = '2016-01-10 09:24:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (69.4ms)[0m   [0;1mCOMMIT[0m
+Rendering user_sessions/new
+Completed in 111ms (View: 2, DB: 71) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 14:54:25) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `login_count` = 3, `failed_login_count` = 0, `last_login_at` = '2016-01-10 09:23:50', `current_login_at` = '2016-01-10 09:24:25', `last_request_at` = '2016-01-10 09:24:25', `perishable_token` = '2e9mcXKcQsH8V9wdrDC', `updated_at` = '2016-01-10 09:24:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (62.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 80ms (DB: 64) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:54:25) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-10 09:24:25', `perishable_token` = 'X5FBxxQIIGkNwcDRyYsd', `updated_at` = '2016-01-10 09:24:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (84.6ms)[0m   [0;1mCOMMIT[0m
+Rendering users/show
+Completed in 127ms (View: 1, DB: 85) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:55:22) [GET]
+
+ActionController::RoutingError (No route matches "/account/logout" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-10 14:58:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:28:08', `perishable_token` = '5cLBcZ4daLpMvI4zl7r', `updated_at` = '2016-01-10 09:28:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (66.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 108ms (DB: 67) | 302 Found [http://localhost/account/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 14:58:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:28:08', `perishable_token` = '7cm3BWCqUwpleVVD9Wuo', `updated_at` = '2016-01-10 09:28:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (55.0ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 71ms (View: 4, DB: 55) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:58:48) [GET]
+
+ActionController::RoutingError (No route matches "/account/destroy" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:58:55) [GET]
+
+ActionController::RoutingError (No route matches "/account/delete" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-10 14:59:10) [GET]
+
+ActionController::RoutingError (No route matches "/account/edi" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-10 14:59:14) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:29:14', `perishable_token` = 'QqJnLXXrTQbhC7BZVNW', `updated_at` = '2016-01-10 09:29:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (62.2ms)[0m   [0mCOMMIT[0m
+Rendering users/edit
+Rendered users/_form (1.4ms)
+Completed in 106ms (View: 10, DB: 63) | 200 OK [http://localhost/account/edit]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:00:20) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:00:28) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `login_count` = 4, `last_login_at` = '2016-01-10 09:24:25', `current_login_at` = '2016-01-10 09:30:28', `last_request_at` = '2016-01-10 09:30:28', `perishable_token` = '9VgGu54OVjVEzUp8YDrD', `updated_at` = '2016-01-10 09:30:28' WHERE `id` = 1[0m
+  [4;35;1mSQL (57.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account/new
+Completed in 72ms (DB: 59) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-10 15:00:28) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:30:28', `perishable_token` = '8M7F7SNxWXLdtbhYzbp', `updated_at` = '2016-01-10 09:30:28' WHERE `id` = 1[0m
+  [4;35;1mSQL (87.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 100ms (DB: 88) | 302 Found [http://localhost/account/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-10 15:00:29) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-10 09:30:29', `perishable_token` = '0TdDngyGougiVulkBjLr', `updated_at` = '2016-01-10 09:30:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (94.6ms)[0m   [0mCOMMIT[0m
+Rendering users/show
+Completed in 108ms (View: 1, DB: 95) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:00:35) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:14:47) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:14:50) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:14:52) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2016-01-10 15:15:36) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:15:41) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:15:43) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:16:52) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:16:56) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2016-01-10 15:17:32) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:17:37) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 31ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:17:42) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:17:54) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:17:55) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-10 15:19:17) [POST]
+  Parameters: {"user_session"=>{"login"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering user_sessions/new
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:19:25) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 27ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:31:38) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:33:38) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:33:39) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:33:43) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:37:11) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+NoMethodError (undefined method `default' for #<UserSessionsController:0x00000002378460>):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (24.8ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:53:10) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/default.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:53:52) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/default.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:53:54) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/default.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:53:58) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/default.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 15:59:12) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 16:00:34) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 16:00:38) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 16:01:11) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 16:01:16) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-10 16:01:25) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+
+ActionView::MissingTemplate (Missing layout layouts/application.erb in view path /home/bhavin/ROR/MVPAUTHLOGIC/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:01:21) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 124ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:01:33) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show", "id"=>"sign_in"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/users/sign_in]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:01:33) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:02:13) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 32ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:02:43) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined local variable or method `csrf_meta_tags' for #<ActionView::Base:0x000000028d44e0>) on line #11 of app/views/layouts/application.rhtml:
+8: <title>SampleRails</title>
+9: <%= stylesheet_link_tag    'application', media: 'all' %>
+10: <%= javascript_include_tag 'application' %>
+11: <%= csrf_meta_tags %>
+12: </head>
+13: <body>
+14: <div id="user_nav">
+
+    app/views/layouts/application.rhtml:11:in `_run_rhtml_app47views47layouts47application46rhtml'
+    <internal:prelude>:10:in `synchronize'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (8.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:03:11) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 32ms (View: 7, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:03:20) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:03:25) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:03:28) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.0ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:03:29) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:03:31) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 17ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:03:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:04:09) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 29ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:04:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:04:58) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.0ms)
+Completed in 39ms (View: 31, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:04:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:05:01) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 23ms (View: 10, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:05:03) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:05:04) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 28ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:05:04) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:05:05) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.5ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:05:35) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.5ms)
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:05:37) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 30ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:05:40) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:05:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:13:51) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:13:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:17) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:21) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 30ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:25) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:28) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:30) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 27ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:14:31) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.3ms)
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:14:33) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:14:34) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.3ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-01-17 18:14:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:19:38) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.4ms)
+Completed in 40ms (View: 31, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:19:40) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:19:41) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:20:06) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:20:07) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:20:07) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 30ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:20:07) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:20:08) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (20.6ms)
+Completed in 33ms (View: 22, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:20:09) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.3ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:20:09) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.5ms)
+Completed in 36ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:22:03) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED /home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:3: syntax error, unexpected ')'
+..., :url => account_path do |f| ).to_s); @output_buffer.concat...
+...                               ^
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+Function body: #coding:UTF-8
+          def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Register</h1>\n\n"
+
+; @output_buffer.concat(( form_for @user, :url => account_path do |f| ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat "\n  "
+; @output_buffer.concat(( render :partial => "form", :object => f ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit "Register" ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:91:in `module_eval'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:91:in `compile!'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process_with_filters'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `block in call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/home/bhavin/.rvm/gems/ruby-1.9.2-p320@rails_2/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:3: syntax error, unexpected ')'
+..., :url => account_path do |f| ).to_s); @output_buffer.concat...
+...                               ^
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/bhavin/ROR/MVPAUTHLOGIC/app/views/users/new.html.erb:10: syntax error, unexpected keyword_end, expecting ')') on line #3 of app/views/users/new.html.erb:
+1: <h1>Register</h1>
+2: 
+3: <%= form_for @user, :url => account_path do |f| %>
+4:   <%#= f.error_messages %>
+5:   <%= render :partial => "form", :object => f %>
+6:   <%= f.submit "Register" %>
+
+    <internal:prelude>:10:in `synchronize'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:22:19) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.5ms)
+Completed in 34ms (View: 24, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:23:47) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (21.0ms)
+Completed in 41ms (View: 30, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:24:01) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:24:02) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (21.1ms)
+Completed in 33ms (View: 23, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-17 18:24:04) [POST]
+  Parameters: {"user"=>{"login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '63105feca182e166c3a5018e7709560a5f9f5c3b866af680e48e8e44bd34d631d9ba2d32c011f9ab5da6453156c50a3765309c68d19ab834eeeb5706c89b915a') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'B06MVyQgX5oGIIR3UEut') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.7ms)
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-17 18:25:07) [POST]
+  Parameters: {"user"=>{"login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '6ae765c7a030697dbd1d33b41ed9f9a85ac0f76a36acbcc89389ed64a20fc6450238124aaaae065efe1ccdd2d73049fcafdd2adf6f6ce16a96ee7937e267eb2f') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'mRyU1jgrMAkRQrefqiNK') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.4ms)
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-17 18:26:21) [POST]
+  Parameters: {"user"=>{"login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'cd62c6a53c53ad1543b960ea5764375cbcd4675d247505f424c5b508b061e7e0850da654b311722a28780deeb7307afecd79f0c702f3e25fd7e059d452cf0730') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY '066sLzJrzGHhEUSG5fs') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (8.1ms)
+Completed in 56ms (View: 20, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:26:29) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 31ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:26:33) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:26:35) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.8ms)
+Completed in 31ms (View: 5, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:26:37) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:26:39) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.9ms)
+Completed in 31ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-17 18:27:01) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.8ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-17 18:27:36) [POST]
+  Parameters: {"user"=>{"login"=>"krina_sukhadia", "email"=>"sukhadia.bhavin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sukhadia.bhavin@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'krina_sukhadia') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '057ff55081748658f473ca5480d11872e7b12ec399d7da04210527b1b3459a67c41987c98a90cf2fe417fb18fcc1cb73db8b3cbcd7d384a3e8877980a5052d97') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'dPZzbaKRP0Pb3vgOTyz') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 18ms (View: 3, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2016-01-17 18:27:48) [POST]
+  Parameters: {"user"=>{"login"=>"krina_sukhadia", "email"=>"sukhadia.bhavin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sukhadia.bhavin1@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'krina_sukhadia') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'TA5XyiF0ZDq8ZhS8JuMY') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`login`, `email`, `crypted_password`, `password_salt`, `persistence_token`, `single_access_token`, `perishable_token`, `login_count`, `failed_login_count`, `last_request_at`, `current_login_at`, `last_login_at`, `current_login_ip`, `last_login_ip`, `created_at`, `updated_at`) VALUES('krina_sukhadia', 'sukhadia.bhavin1@gmail.com', 'd30d5069e840f8c3a200012a886968ea673e28331d6c47b5faded124531cdb23a40e737611d423beaab1ffd8783a9d081f99a3cd8b3048a0490bc62b5bca884f', 'tpmOiaVlrUY4bOJD7zL', '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820', 'TA5XyiF0ZDq8ZhS8JuMY', 'LUO5m7leZrGQXalpqEy', 1, 0, '2016-01-17 12:57:48', '2016-01-17 12:57:48', NULL, '127.0.0.1', NULL, '2016-01-17 12:57:48', '2016-01-17 12:57:48')[0m
+  [4;36;1mSQL (98.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed in 251ms (DB: 99) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:27:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show", "id"=>"sign_in"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (23.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 12:57:49', `perishable_token` = 'b28Icf5aU9tf7siHOvA0', `updated_at` = '2016-01-17 12:57:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (68.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 164ms (View: 21, DB: 92) | 200 OK [http://localhost/users/sign_in]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 18:27:56) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit", "id"=>"current"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 12:57:56', `perishable_token` = '75eXJr82Tf0KcqlusqK', `updated_at` = '2016-01-17 12:57:56' WHERE `id` = 2[0m
+  [4;36;1mSQL (98.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (0.8ms)
+Completed in 117ms (View: 6, DB: 99) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:27:58) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 12:57:58', `perishable_token` = 'nhGTMdoqGhzk5NPDO5AG', `updated_at` = '2016-01-17 12:57:58' WHERE `id` = 2[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 116ms (View: 1, DB: 100) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 18:28:00) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '52c87c7bbb6b61333c7a04b588ebdc97b7270f62d9bdbb78a9c8c9c23fbe7839dd96f9c95e70a2820b6e7f0917e1de7897b0b92fdea84f6bc5ccb888ea7f5820') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 12:58:00', `perishable_token` = 'qclxlwsr9oTdUUhgsM9', `updated_at` = '2016-01-17 12:58:00' WHERE `id` = 2[0m
+  [4;36;1mSQL (101.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 116ms (DB: 102) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:28:00) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:28:55) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:29:04) [POST]
+  Parameters: {"user_session"=>{"login"=>"kaflkaflkas", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'kaflkaflkas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:29:10) [POST]
+  Parameters: {"user_session"=>{"login"=>"kaflkaflkas", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:29:11) [POST]
+  Parameters: {"user_session"=>{"login"=>"kaflkaflkas", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:29:31) [POST]
+  Parameters: {"user_session"=>{"login"=>"kaflkaflkas", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 39ms (View: 26, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:29:39) [POST]
+  Parameters: {"user_session"=>{"login"=>"kaflkaflkas", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'kaflkaflkas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/user_session]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 18:30:28) [POST]
+  Parameters: {"user_session"=>{"login"=>"krina_sukhadia", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'krina_sukhadia') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `login_count` = 2, `last_login_at` = '2016-01-17 12:57:48', `current_login_at` = '2016-01-17 13:00:28', `last_login_ip` = '127.0.0.1', `last_request_at` = '2016-01-17 13:00:28', `perishable_token` = 'EIH2S0IS0c8qAUDrUmSX', `updated_at` = '2016-01-17 13:00:28' WHERE `id` = 2[0m
+  [4;36;1mSQL (96.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 139ms (DB: 97) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:30:29) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:29', `perishable_token` = 'bH02BkpVNykqSAfj7L8X', `updated_at` = '2016-01-17 13:00:29' WHERE `id` = 2[0m
+  [4;36;1mSQL (108.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 123ms (View: 1, DB: 109) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 18:30:36) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:36', `perishable_token` = 'FXRaRMDb4b1vzb4dBDG0', `updated_at` = '2016-01-17 13:00:36' WHERE `id` = 2[0m
+  [4;36;1mSQL (56.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (0.8ms)
+Completed in 92ms (View: 2, DB: 57) | 200 OK [http://localhost/account/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2016-01-17 18:30:49) [PUT]
+  Parameters: {"_method"=>"put", "user"=>{"login"=>"krina_sukhadia", "email"=>"sukhadia.bhavin1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update", "controller"=>"users", "action"=>"update"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:49', `perishable_token` = 'QU4Kkq2hDy0XV5RBW7a', `updated_at` = '2016-01-17 13:00:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (110.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '426792e836e5d0ee6df869c6cd04ddd3d082633f970915b60031c29f4be3625e29b274efe134f791ddad0465160a3e40f75f95b615c70ff1c32f938c9f831fdb' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `password_salt` = 'wZTzsHZbMXuuIFjp5haM', `crypted_password` = '786f80eef1bdeb86a9c84e072be3a37f6371224aae023fc3161610aedef9e8780807722dc2bc8c2b596cf914e3e4c58911b6787cb41dedac758a8bf5f3cff5a8', `persistence_token` = '426792e836e5d0ee6df869c6cd04ddd3d082633f970915b60031c29f4be3625e29b274efe134f791ddad0465160a3e40f75f95b615c70ff1c32f938c9f831fdb', `perishable_token` = 'W6XQpbyChITacj7oG69', `last_request_at` = '2016-01-17 13:00:49', `login_count` = 3, `last_login_at` = '2016-01-17 13:00:28', `current_login_at` = '2016-01-17 13:00:49', `updated_at` = '2016-01-17 13:00:49' WHERE `id` = 2[0m
+  [4;35;1mSQL (56.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 216ms (DB: 170) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:30:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:49', `perishable_token` = 'FKSF04wXovbs538eOxY', `updated_at` = '2016-01-17 13:00:49' WHERE `id` = 2[0m
+  [4;35;1mSQL (51.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 68ms (View: 1, DB: 52) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 18:30:55) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit", "id"=>"current"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:55', `perishable_token` = 'fvxnJJt7GLwb2GZI2JVw', `updated_at` = '2016-01-17 13:00:55' WHERE `id` = 2[0m
+  [4;35;1mSQL (119.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (0.8ms)
+Completed in 154ms (View: 2, DB: 120) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 18:30:57) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:57', `perishable_token` = '8qPXZT1jL2P32XRBgEF', `updated_at` = '2016-01-17 13:00:57' WHERE `id` = 2[0m
+  [4;35;1mSQL (114.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 131ms (View: 1, DB: 115) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 18:30:59) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 13:00:59', `perishable_token` = 'eeiptgSE5ThyHU39OiGn', `updated_at` = '2016-01-17 13:00:59' WHERE `id` = 2[0m
+  [4;35;1mSQL (107.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 122ms (DB: 108) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:30:59) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 18:31:09) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit", "id"=>"current"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/users/current/edit]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 18:31:09) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:22:00) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:22:07) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `login_count` = 5, `last_login_at` = '2016-01-10 09:30:28', `current_login_at` = '2016-01-17 15:52:07', `last_request_at` = '2016-01-17 15:52:07', `perishable_token` = '97zALeT1KeyIw48UDO2T', `updated_at` = '2016-01-17 15:52:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (63.1ms)[0m   [0mCOMMIT[0m
+
+NameError (undefined local variable or method `account_url' for #<UserSessionsController:0x000000029d79c8>):
+  app/controllers/user_sessions_controller.rb:13:in `create'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (10.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:22:58) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:52:58', `perishable_token` = 'srSmDjErmfePmdAbec6', `updated_at` = '2016-01-17 15:52:58' WHERE `id` = 1[0m
+  [4;35;1mSQL (61.3ms)[0m   [0mCOMMIT[0m
+
+NameError (undefined local variable or method `account_url' for #<UserSessionsController:0x007f45d463aaf8>):
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (6.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:23:21) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:53:21', `perishable_token` = 'PBxKA7isa4lvTW8A9Uk4', `updated_at` = '2016-01-17 15:53:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (55.7ms)[0m   [0mCOMMIT[0m
+
+NameError (undefined local variable or method `account_url' for #<UserSessionsController:0x000000027ee300>):
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (6.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:23:53) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:53:53', `perishable_token` = 'HrE8A7aUr11wCKN0fwZ', `updated_at` = '2016-01-17 15:53:53' WHERE `id` = 1[0m
+  [4;35;1mSQL (59.8ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:24:33) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:54:33', `perishable_token` = 'dWrXUdPdqJz6jyZDZi', `updated_at` = '2016-01-17 15:54:33' WHERE `id` = 1[0m
+  [4;35;1mSQL (61.5ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2016-01-17 21:24:37) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:24:43) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:54:43', `perishable_token` = 'TP9PkwgHFzf2RfAXFwe', `updated_at` = '2016-01-17 15:54:43' WHERE `id` = 1[0m
+  [4;35;1mSQL (81.6ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:25:04) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:55:04', `perishable_token` = 'lmooD2wjp6IJWSDkHMI', `updated_at` = '2016-01-17 15:55:04' WHERE `id` = 1[0m
+  [4;35;1mSQL (69.5ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:25:06) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:55:06', `perishable_token` = 'xbEa2DRWXRf9nt73JGqW', `updated_at` = '2016-01-17 15:55:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (65.5ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:25:41) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:55:41', `perishable_token` = 'CfbzCYSOblr4QUipLZY0', `updated_at` = '2016-01-17 15:55:41' WHERE `id` = 1[0m
+  [4;35;1mSQL (63.8ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/application_controller.rb:33:in `require_no_user'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:26:49) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:56:49', `perishable_token` = 'iczwNcBOtssxydBdDJU', `updated_at` = '2016-01-17 15:56:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (67.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 80ms (DB: 68) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 21:26:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:56:49', `perishable_token` = '18z391wX2qs4wSpKWOOE', `updated_at` = '2016-01-17 15:56:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (67.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 86ms (View: 8, DB: 68) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 21:26:53) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:56:53', `perishable_token` = 'oTFOzDUJStQN1SwF5ei', `updated_at` = '2016-01-17 15:56:53' WHERE `id` = 1[0m
+  [4;35;1mSQL (85.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 99ms (DB: 86) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:26:53) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:27:00) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `login_count` = 6, `last_login_at` = '2016-01-17 15:52:07', `current_login_at` = '2016-01-17 15:57:00', `last_request_at` = '2016-01-17 15:57:00', `perishable_token` = 'effRh3xGpohfjUYxB', `updated_at` = '2016-01-17 15:57:00' WHERE `id` = 1[0m
+  [4;35;1mSQL (56.9ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?):
+  (eval):17:in `user_url'
+  app/controllers/user_sessions_controller.rb:13:in `create'
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:27:18) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:57:18', `perishable_token` = 'QDtHknKssaJkgEvKSPyL', `updated_at` = '2016-01-17 15:57:18' WHERE `id` = 1[0m
+  [4;35;1mSQL (66.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 101ms (DB: 68) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 21:27:18) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:57:18', `perishable_token` = 'L3KAuA5snaL3qJb42RF2', `updated_at` = '2016-01-17 15:57:18' WHERE `id` = 1[0m
+  [4;35;1mSQL (52.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 67ms (View: 1, DB: 53) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 21:27:27) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:57:28', `perishable_token` = 'UjHCfl4MHeYXj9q4pIJM', `updated_at` = '2016-01-17 15:57:28' WHERE `id` = 1[0m
+  [4;35;1mSQL (51.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session
+Completed in 82ms (DB: 52) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2016-01-17 21:27:28) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2016-01-17 21:28:34) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"show"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  <internal:prelude>:10:in `synchronize'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:28:39) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:28:48) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `login_count` = 7, `last_login_at` = '2016-01-17 15:57:00', `current_login_at` = '2016-01-17 15:58:48', `last_request_at` = '2016-01-17 15:58:48', `perishable_token` = 'fb5BS1jWhsAzHDRwxBbU', `updated_at` = '2016-01-17 15:58:48' WHERE `id` = 1[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 100ms (DB: 62) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 21:28:48) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:58:48', `perishable_token` = 'RK6DqevIuv0C3doKJU62', `updated_at` = '2016-01-17 15:58:48' WHERE `id` = 1[0m
+  [4;35;1mSQL (54.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 101ms (View: 6, DB: 55) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 21:28:51) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:58:51', `perishable_token` = 'tc13IhDJMY1OQuiEcr', `updated_at` = '2016-01-17 15:58:51' WHERE `id` = 1[0m
+  [4;35;1mSQL (115.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 130ms (DB: 116) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:28:51) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 33ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:28:55) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2016-01-17 21:29:02) [POST]
+  Parameters: {"user_session"=>{"login"=>"sukhadia.bhavin", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'sukhadia.bhavin') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `login_count` = 8, `last_login_at` = '2016-01-17 15:58:48', `current_login_at` = '2016-01-17 15:59:02', `last_request_at` = '2016-01-17 15:59:02', `perishable_token` = '4GnIv0xezQ4BhsAYF1q', `updated_at` = '2016-01-17 15:59:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (128.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 143ms (DB: 129) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2016-01-17 21:29:02) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:59:02', `perishable_token` = 'qNSHU7DoyZFiE546TP', `updated_at` = '2016-01-17 15:59:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (108.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 122ms (View: 1, DB: 109) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 21:29:05) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit", "id"=>"current"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:59:05', `perishable_token` = 'LHfJSNi5kJQlzgF190kC', `updated_at` = '2016-01-17 15:59:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (123.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (1.2ms)
+Completed in 145ms (View: 9, DB: 123) | 200 OK [http://localhost/users/current/edit]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2016-01-17 21:29:18) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2016-01-17 15:59:18', `perishable_token` = 'Rc7TXjrur5DpKRKIeJPV', `updated_at` = '2016-01-17 15:59:18' WHERE `id` = 1[0m
+  [4;35;1mSQL (68.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 82ms (DB: 69) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:29:18) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2016-01-17 21:29:23) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit", "id"=>"current"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/users/current/edit]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-17 21:29:23) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:30:08) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 221ms (View: 67, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:34:16) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:34:17) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-21 22:34:19) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (17.3ms)
+Completed in 85ms (View: 76, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:34:21) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2016-01-21 22:34:29) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.8ms)
+Completed in 32ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:34:35) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:49:14) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+
+ActionView::TemplateError (undefined method `email' for #<UserSession: no credentials provided>) on line #6 of app/views/user_sessions/new.html.erb:
+3: <% form_for @user_session, :url => user_session_path do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= f.label :email %><br />
+6:   <%= f.text_field :email %><br />
+7:   <br />
+8:   <%= f.label :password %><br />
+9:   <%= f.password_field :password %><br />
+
+    app/views/user_sessions/new.html.erb:6:in `block in _run_erb_app47views47user_sessions47new46html46erb'
+    app/views/user_sessions/new.html.erb:3
+    <internal:prelude>:10:in `synchronize'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /home/bhavin/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (24.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2016-01-21 22:51:45) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
